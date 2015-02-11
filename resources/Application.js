@@ -6,6 +6,17 @@
  * ../resources/Application.js
  */
 
+/*
+ * --------------------------------------------------------------------
+ * INITIAL GLOBAL SETTINGS
+ * --------------------------------------------------------------------
+ */
+var SETTINGS = {
+	server: "http://localhost/homefront",  // Define HTTP Request URL to server
+	token: "7abaa0020aec",  // Token to identify main application requests
+	debug: true  // Enable console.log method (disable in production environment)
+};
+
 $(document).ready(function() {
 	"use strict";
 
