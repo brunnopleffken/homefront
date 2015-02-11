@@ -26,15 +26,21 @@ define("BASEPATH", dirname(__FILE__));
 class Main
 {
 	// What are we doing?
-	public $controller;
-	public $action;
-	public $id;
+	public $controller = "";
+	public $action = "";
+	public $id = "";
 
 	// Database class
 	public $Db;
 
 	// Controller instance
-	public $instance;
+	private $instance;
+
+	// Page content
+	private $content = "";
+
+	// Defined variables inside controller
+	private $view_data;
 
 	// Development environment
 	const DEBUG = true;
@@ -119,6 +125,9 @@ class Main
 		if(method_exists($this->instance, "_afterReady")) {
 			$this->instance->_afterReady();
 		}
+
+		// Get defined variables
+		$this->view_data = $this->instance->Get();
 	}
 
 	/**
@@ -129,7 +138,18 @@ class Main
 	private function LoadView($controller, $action)
 	{
 		if($this->instance->HasLayout()) {
+			// Get defined variables in controller
+			foreach($this->view_data as $k => $v) {
+				$$k = $v;
+			}
+
+			// Load page content
+			ob_start();
 			require("views/" . $this->controller . "." . $this->action . ".php");
+			$this->content = ob_get_clean();
+
+			// Load master Page
+			require("views/layouts/Default.php");
 		}
 	}
 }

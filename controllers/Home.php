@@ -11,7 +11,9 @@ class Home extends Application
 {
 	public function Main()
 	{
-		echo "Running";
+		$user = "BrunnoPleffken";
+
+		$this->Set("player_username", $user);
 	}
 }
 
