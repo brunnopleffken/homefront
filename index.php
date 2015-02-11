@@ -113,17 +113,17 @@ class Main
 			$action = $this->action = "Main";
 		}
 
-		// Execute Controller::_beforeReady() method
-		if(method_exists($this->instance, "_beforeReady")) {
-			$this->instance->_beforeReady();
+		// Execute Controller::_beforeFilter() method
+		if(method_exists($this->instance, "_beforeFilter")) {
+			$this->instance->_beforeFilter();
 		}
 
 		// Execute Controller with the provided method
 		$this->instance->$action();
 
-		// Execute Controller::_afterReady() method
-		if(method_exists($this->instance, "_afterReady")) {
-			$this->instance->_afterReady();
+		// Execute Controller::_afterFilter() method
+		if(method_exists($this->instance, "_afterFilter")) {
+			$this->instance->_afterFilter();
 		}
 
 		// Get defined variables
