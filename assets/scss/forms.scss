@@ -1,0 +1,79 @@
+// FORMS
+
+form {
+	input, textarea, button, select {
+		background-color: rgba(0, 0, 0, 0.6);
+		border: 1px solid rgba(200, 235, 255, 0.2);
+		color: #ddd;
+		font-family: $font;
+		font-size: 13px;
+		margin: 5px 0 10px 0;
+		padding: 10px;
+		text-transform: uppercase;
+		@include transition(300ms);
+		&:focus { border-color: rgba(200, 235, 255, 0.4); box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+		&.tiny { width: 60px; }
+		&.small { width: 100px; }
+		&.medium { width: 160px; }
+		&.large { width: 250px; }
+		&.wide { width: 400px; }
+		&.flexible { width: 100%; }
+		&.error {
+			border: 1px solid #900;
+		}
+	}
+	input[type=submit],
+	input[type=button],
+	button {
+		border: 1px solid rgba(200, 235, 255, 0.2);
+		color: #ccc;
+		cursor: pointer;
+		position: relative;
+		width: 160px;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+			border-color: transparent;
+			color: #fff;
+		}
+		&:focus { box-shadow: none; }
+	}
+	label { display: block; }
+}
+
+// CUSTOM SELECT CONTROLS
+
+.select-control {
+	ul {
+		overflow: hidden;
+		li {
+			background-color: rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			float: left;
+			margin-right: 10px;
+			padding: 20px;
+			width: 145px;
+			@include transition(300ms);
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// PROGRESS BAR
+
+.progress-bar {
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: -5px 0 20px -10px #fff inset;
+	height: 8px;
+	width: 400px;
+	.progress-fill {
+		background-color: rgba(200, 230, 255, 0.9);
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 2px 1px #fff inset;
+		height: 8px;
+		width: 70%;
+	}
+}

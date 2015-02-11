@@ -1,0 +1,51 @@
+// BUTTONS INSIDE NOTIFICATIONS
+// "CANCEL" AND "OK"
+
+.button-link {
+	background-color: rgba(200, 240, 255, 0.1);
+	color: #bbb;
+	display: inline-block;
+	line-height: 26px;
+	margin: 0 10px;
+	position: relative;
+	text-align: center;
+	width: 120px;
+	@include transition(400ms);
+	&:before, &:after {
+		content: "";
+		height: 26px;
+		opacity: 0;
+		position: absolute;
+		width: 120px;
+		@include transition(400ms);
+	}
+	&:before {
+		right: -5px;
+		top: -5px;
+	}
+	&:after {
+		bottom: -5px;
+		left: -5px;
+	}
+	&:hover {
+		color: #fff;
+		&:before, &:after { opacity: 1; }
+		&:before {
+			right: -1px;
+			top: -1px;
+		}
+		&:after {
+			bottom: -1px;
+			left: -1px;
+		}
+		&.confirm { background-color: rgba(0, 150, 0, 0.3); }
+		&.refuse { background-color: rgba(200, 0, 0, 0.3); }
+	}
+	&:active { background-color: #f00; }
+	&.confirm {
+		&:before, &:after { border: 1px solid rgba(0, 150, 0, 0.5) }
+	}
+	&.refuse {
+		&:before, &:after { border: 1px solid rgba(230, 0, 0, 0.5) }
+	}
+}

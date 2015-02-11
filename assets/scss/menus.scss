@@ -1,0 +1,125 @@
+// RESOURCES BAR
+
+.resources-bar {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-bottom: 1px solid #1d2a37;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+	.resources {
+		list-style: none;
+		margin-left: 10px;
+		float: left;
+		li {
+			float: left;
+			font-size: 13px;
+			line-height: 30px;
+			margin-right: 20px;
+			img {
+				height: 16px;
+				margin-right: 5px;
+				width: 16px;
+				vertical-align: text-bottom;
+			}
+			&.credits { color: $credits; }
+			&.metal { color: $metal; }
+			&.deuterium { color: $deuterium; }
+			&.food { color: $food; }
+		}
+	}
+	.nav {
+		float: right;
+		font-size: 1em;
+		list-style: none;
+		li {
+			float: left;
+			position: relative;
+			white-space: nowrap;
+			&:hover {
+				&::before {
+					bottom: -5px;
+					height: 5px;
+				}
+			}
+			&::before {
+				background-color: $lightBlueHover;
+				bottom: 0px;
+				content: '';
+				height: 0;
+				position: absolute;
+				width: 100%;
+				@include transition(150ms);
+			}
+			a {
+				display: block;
+				line-height: 30px;
+				padding: 0 12px;
+				> .logged-player-name { color: $lightBlue; }
+				> .sign-out {
+					color: rgba(215, 235, 255, 0.5);
+					font-size: 11px;
+					&:hover { color: #fff; }
+				}
+			}
+		}
+	}
+}
+
+// SIDE/EXPANDABLE NAVIGATION BAR
+
+.navigation-bar {
+	background-color: rgba(0, 10, 20, 0.5);
+	border-right: 1px solid rgba(215, 235, 255, 0.3);
+	box-shadow: 4px 0 15px rgba(0, 0, 0, 0.8), -4px 0 10px rgba(255, 255, 255, 0.1) inset;
+	height: 100%;
+	position: fixed;
+	width: 60px;
+	z-index: 150;
+	@include transition(250ms ease);
+	ul {
+		list-style: none;
+		margin-top: -200px;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		li {
+			font-size: 13px;
+			padding-left: 10px;
+			&.selected {
+				background-color: $lightBlueHover;
+				box-shadow: 0 0 10px rgba(255, 255, 255, 1) inset;
+				a {
+					color: #012;
+					&:hover { color: #012; }
+				}
+			}
+			a {
+				color: $lightBlueHover;
+				cursor: pointer;
+				display: block;
+				line-height: 50px;
+				white-space: nowrap;
+				@include transition(300ms);
+				&:hover {
+					color: #fff;
+					text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+				}
+				i {
+					font-size: 30px;
+					margin-right: 10px;
+					vertical-align: middle;
+				}
+				span {
+					display: inline-block;
+					opacity: 0;
+				}
+			}
+		}
+	}
+	&:hover {
+		width: 200px;
+		a > span { opacity: 1; }
+	}
+}

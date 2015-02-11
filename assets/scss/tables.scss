@@ -1,0 +1,18 @@
+table.data-table {
+	border-collapse: separate;
+	border-spacing: 3px;
+	tr {
+		th {
+			background-color: rgba(0, 0, 0, 0.5);
+			border-top-right-radius: 15px;
+			color: #7497c1;
+			font-size: 18px;
+			padding: 10px 15px;
+			text-align: left;
+		}
+		td {
+			background-color: rgba(0, 0, 0, 0.3);
+			padding: 12px 10px;
+		}
+	}
+}

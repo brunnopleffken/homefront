@@ -1,0 +1,54 @@
+// Font face
+$font: Baksheesh, sans-serif;
+
+// Main colors
+$credits: #fcc02c;
+$metal: #b9ecff;
+$deuterium: #ee2200;
+$food: #37d834;
+
+// Other colors
+$lightBlue: #b2e0f6;
+$lightBlueHover: #e5f8fc;
+
+// Transition
+@mixin transition($ms) {
+	-webkit-transition: $ms;
+	-moz-transition: $ms;
+	transition: $ms;
+}
+
+// FONT FACE
+
+@font-face {
+	font-family: Baksheesh;
+	font-weight: 200;
+	src: url('../fonts/baksheeshthin-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: Baksheesh;
+	font-weight: normal;
+	src: url('../fonts/baksheeshregular-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: Baksheesh;
+	font-weight: bold;
+	src: url('../fonts/baksheeshbold-webfont.ttf') format('truetype');
+}
+
+// CSS RESET
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	line-height: 1em;
+	list-style: none;
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	td { padding: 0; }
+}
