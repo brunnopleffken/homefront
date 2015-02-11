@@ -7,5 +7,12 @@
  * ../kernel/Security.php
  */
 
+class Security
+{
+	public function __construct()
+	{
+		// ...
+	}
+}
 
 ?>
