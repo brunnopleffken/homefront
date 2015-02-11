@@ -121,7 +121,7 @@ class Database
 	 * CONSTRUCTOR: CONNECT TO DATABASE SERVER
 	 * --------------------------------------------------------------------
 	 */
-	public function Exception($message)
+	private function Exception($message)
 	{
 		Html::Error($message);
 	}
