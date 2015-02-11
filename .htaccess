@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+# /foo = index.php?c=foo
+# /foo/2 = index.php?c=foo&id=2
+# /foo/bar = index.php?c=foo&act=bar
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?c=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?c=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?c=$1&id=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/$ index.php?c=$1&id=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z]+)$ index.php?c=$1&act=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z]+)/$ index.php?c=$1&act=$2
+</IfModule>
