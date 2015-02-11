@@ -33,7 +33,7 @@ class Html
 	 */
 	public static function Error($message)
 	{
-		echo "<h1>Error!</h1><p>" . $message . "</p><hr><em>Addictive Community - (c) 2014 All rights reserved.</em>";
+		echo "<h1>Error!</h1><p>" . $message . "</p><hr><em>Homefront Online - (c) " . date("Y") . " All rights reserved.</em>";
 		exit;
 	}
 }
