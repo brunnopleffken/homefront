@@ -12,6 +12,9 @@ class Application
 	// True: show layout; false: hide layout and master page
 	public $layout = true;
 
+	// Define custom master page
+	public $master = "Default";
+
 	// Dictionary of keys and value to be shown on View
 	public $view_data = array();
 

@@ -148,8 +148,8 @@ class Main
 			require("views/" . $this->controller . "." . $this->action . ".php");
 			$this->content = ob_get_clean();
 
-			// Load master Page
-			require("views/layouts/Default.php");
+			// Load master page
+			require("views/layouts/" . $this->instance->master . ".php");
 		}
 	}
 }
