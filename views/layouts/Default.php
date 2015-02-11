@@ -3,6 +3,7 @@
 <head>
 	<title>Homefront Online</title>
 	<meta charset="utf-8">
+	<base href="<?php echo PATH ?>">
 	<!-- Cascading Stylesheet -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- JavaScript Third-party -->

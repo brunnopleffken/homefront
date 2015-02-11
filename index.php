@@ -13,7 +13,7 @@
  * --------------------------------------------------------------------
  */
 
-define("PATH", "http://localhost/homefront");
+define("PATH", "http://localhost/homefront/");
 define("BASEPATH", dirname(__FILE__));
 
 /**
