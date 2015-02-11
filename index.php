@@ -33,6 +33,9 @@ class Main
 	// Database class
 	public $Db;
 
+	// Controller instance
+	public $instance;
+
 	// Development environment
 	const DEBUG = true;
 
@@ -86,14 +89,15 @@ class Main
 	 */
 	private function LoadController($controller, $action = "")
 	{
-		// Controllers' name are in UpperCamelCase
+		// Controllers' name are in UpperCamelCase, but URLs in lowercase
 		$_controller = $this->controller = ucwords($controller);
 
-		// Load Application class
+		// Load Application controller
 		require("controllers/Application.php");
 
 		// Load controller
 		require("controllers/" . $_controller . ".php");
+		$this->instance = new $_controller();
 
 		// Get and execute action passed by URL, if any
 		if($action != "") {
@@ -104,22 +108,27 @@ class Main
 		}
 
 		// Execute Controller::_beforeReady() method
-		if(method_exists($_controller, "_beforeReady")) {
-			$_controller::_beforeReady();
+		if(method_exists($this->instance, "_beforeReady")) {
+			$this->instance->_beforeReady();
 		}
 
 		// Execute Controller with the provided method
-		$_controller::$action();
+		$this->instance->$action();
 
 		// Execute Controller::_afterReady() method
-		if(method_exists($_controller, "_afterReady")) {
-			$_controller::_afterReady();
+		if(method_exists($this->instance, "_afterReady")) {
+			$this->instance->_afterReady();
 		}
 	}
 
-	private function Loadview($controller, $action)
+	/**
+	 * --------------------------------------------------------------------
+	 * LOAD MASTER PAGE AND VIEW
+	 * --------------------------------------------------------------------
+	 */
+	private function LoadView($controller, $action)
 	{
-		if(Application::HasLayout()) {
+		if($this->instance->HasLayout()) {
 			require("views/" . $this->controller . "." . $this->action . ".php");
 		}
 	}
