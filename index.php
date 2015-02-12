@@ -65,7 +65,7 @@ class Main
 
 		// If there isn't any controller defined...
 		if(!$this->controller) {
-			$this->controller = "home";
+			$this->controller = "login";
 		}
 
 		$this->LoadController($this->controller, $this->action);
@@ -107,7 +107,7 @@ class Main
 
 		// Get and execute action passed by URL, if any
 		if($action != "") {
-			$action = $this->action;
+			$action = $this->FormatActionName($this->action);
 		}
 		else {
 			$action = $this->action = "Main";
@@ -151,6 +151,19 @@ class Main
 			// Load master page
 			require("views/layouts/" . $this->instance->master . ".php");
 		}
+	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * CONVERT string_with_underscore TO StringWithUnderscore
+	 * --------------------------------------------------------------------
+	 */
+	private function FormatActionName($action_name)
+	{
+		$action_name = preg_replace("/(_)/", " ", $action_name);
+		$action_name = preg_replace("/([\s])/", "", ucwords($action_name));
+
+		return $action_name;
 	}
 }
 
