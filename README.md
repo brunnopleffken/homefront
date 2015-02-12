@@ -14,6 +14,23 @@ Features:
 * Military development, fleets managements and battles!
 
 
+###Folder Structure###
+```
+root - index.php ONLY, nothing else!
+/assets
+ '-/css - Compiled CSS files (do not modify manually)
+ '-/fonts - True-type web fonts
+ '-/images - As it says, images, textures, icons, etc.
+ '-/scss - Source Sass/Compass files
+/controllers - PHP controllers for each program module
+/kernel - Main core PHP files (database, security, authentication, etc)
+/libraries - Specific JavaScript functions to be used in each module
+ '-/core - JavaScript libraries to be used in any part of the program
+/thirdparty - As it says, third-party PHP and JavaScript libraries
+/views - HTML templates for each module
+```
+
+
 ###About the Author###
 
 **Brunno Pleffken Hosti**, programmer well-versed in object-oriented PHP and .NET/C# (ASP.NET, Windows Forms, WPF and Windows Phone development). Currently, Front-End developer at Phocus Interact (www.phocus.com.br).
