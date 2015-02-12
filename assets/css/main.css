@@ -9,6 +9,9 @@ table td { padding: 0; }
 html { height: 100%; }
 
 html, body { background: #000 url("../images/background.jpg") no-repeat center; background-size: cover; color: #fff; cursor: default; font-family: Baksheesh, sans-serif; font-size: 13px; height: 100%; overflow: hidden; position: relative; text-transform: uppercase; }
+html .fleft, body .fleft { float: left; }
+html .fright, body .fright { float: right; }
+html .fcontainer, body .fcontainer { overflow: hidden; }
 html .tcenter, body .tcenter { text-align: center; }
 
 a { color: #fff; text-decoration: none; }
@@ -33,6 +36,13 @@ h2:first-child { padding-top: 0; }
 
 section .data-item { font-size: 22px; line-height: 23px; margin-bottom: 4px; color: #fff; text-transform: uppercase; }
 section .data-label { font-size: 11px; line-height: 15px; color: #6c96cc; font-family: Baksheesh, sans-serif; text-transform: uppercase; }
+
+.sitrep-list .box { border: 2px solid transparent; margin-bottom: 10px; overflow: hidden; }
+.sitrep-list .box.low { border-color: #6bd600; background-color: rgba(107, 214, 0, 0.05); }
+.sitrep-list .box.medium { border-color: #ffd600; background-color: rgba(255, 214, 0, 0.05); }
+.sitrep-list .box.high { border-color: #e2000c; background-color: rgba(226, 0, 12, 0.05); }
+.sitrep-list .box .image { background-color: #ccc; float: left; height: 48px; width: 48px; }
+.sitrep-list .box span { display: block; float: left; line-height: 48px; padding: 0 15px; vertical-align: middle; }
 
 form input, form textarea, form button, form select { background-color: rgba(0, 0, 0, 0.6); border: 1px solid rgba(200, 235, 255, 0.2); color: #ddd; font-family: Baksheesh, sans-serif; font-size: 13px; margin: 5px 0 10px 0; padding: 10px; text-transform: uppercase; -webkit-transition: 300ms; -moz-transition: 300ms; transition: 300ms; }
 form input:focus, form textarea:focus, form button:focus, form select:focus { border-color: rgba(200, 235, 255, 0.4); box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }

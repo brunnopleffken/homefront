@@ -15,6 +15,9 @@ html, body {
 	overflow: hidden;
 	position: relative;
 	text-transform: uppercase;
+	.fleft { float: left; }
+	.fright { float: right; }
+	.fcontainer { overflow: hidden; }
 	.tcenter { text-align: center; }
 }
 
@@ -128,5 +131,31 @@ section {
 		color: #6c96cc;
 		font-family: $font;
 		text-transform: uppercase;
+	}
+}
+
+// SITUATION REPORT
+
+.sitrep-list {
+	.box {
+		border: 2px solid transparent;
+		margin-bottom: 10px;
+		overflow: hidden;
+		&.low { border-color: #6bd600; background-color: rgba(#6bd600, 0.05); }
+		&.medium { border-color: #ffd600; background-color: rgba(#ffd600, 0.05); }
+		&.high { border-color: #e2000c; background-color: rgba(#e2000c, 0.05); }
+		.image {
+			background-color: #ccc;
+			float: left;
+			height: 48px;
+			width: 48px;
+		}
+		span {
+			display: block;
+			float: left;
+			line-height: 48px;
+			padding: 0 15px;
+			vertical-align: middle;
+		}
 	}
 }
