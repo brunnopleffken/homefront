@@ -11,12 +11,12 @@ var Utils;
 (function() {
 	"use strict";
 
-	/*
+	/**
 	 * --------------------------------------------------------------------
 	 * UTILS.JS CONSTRUCTOR
 	 * --------------------------------------------------------------------
 	 */
-	Utils = function() {};
+	Utils = {};
 
 	/*
 	 * --------------------------------------------------------------------
@@ -25,5 +25,6 @@ var Utils;
 	 */
 	Utils.serverUrl = function(controller, method){
 		return SETTINGS.server + "/" + controller + "/" + method;
-	};
+	}
+
 }).call(this);

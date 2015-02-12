@@ -18,14 +18,14 @@ var SETTINGS = {
 };
 
 /*
-* --------------------------------------------------------------------
-* GLOBAL FUNCTIONS THAT MUST BE APPLIED TO ALL PAGES
-* --------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------
+ * GLOBAL FUNCTIONS THAT MUST BE APPLIED TO ALL PAGES
+ * --------------------------------------------------------------------
+ */
 $(document).ready(function() {
 	"use strict";
 
-	// Prevent unhandled drag and drop of files into the browser from replacing the entire app.
+	// Prevent unhandled drag and drop of files into the browser from replacing the entire app
 	$(window.document)
 		.on("dragover", function(event) {
 			event.stopPropagation();
@@ -43,6 +43,12 @@ $(document).ready(function() {
 		}
 	});
 
+	// Transform SELECT fields to Select2
+	$(".select2").select2({
+		width: "element"
+	});
+
 	// Centralize window
 	UI.loadWindow();
+
 });

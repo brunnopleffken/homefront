@@ -6,10 +6,17 @@
  * ../libraries/core/UI.js
  */
 
-var UI = {};
+var UI;
 
 (function() {
 	"use strict";
+
+	/**
+	 * --------------------------------------------------------------------
+	 * UI.JS CONSTRUCTOR
+	 * --------------------------------------------------------------------
+	 */
+	UI = {};
 
 	/**
 	 * --------------------------------------------------------------------
@@ -23,7 +30,7 @@ var UI = {};
 
 		identifier.style.marginTop = elementOffsetHeight * -0.5 + "px";
 		identifier.style.marginLeft = elementOffsetWidth * -0.5 + "px";
-	};
+	}
 
 	/**
 	 * --------------------------------------------------------------------
@@ -48,7 +55,7 @@ var UI = {};
 
 		// Centralize modal window
 		this._centralizeModalWindow(modalWindow);
-	};
+	}
 
 	/**
 	 * --------------------------------------------------------------------
