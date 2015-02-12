@@ -18,6 +18,19 @@ class Report extends Application
 	{
 		// ...
 	}
+
+	public function BuildSituationReport()
+	{
+		$this->layout = false;
+
+		$report = array(
+			array("priority" => "high", "type" => "technology", "description" => "Lorem ipsum dolor sit amet consectetur adispicing elit"),
+			array("priority" => "low", "type" => "build", "description" => "Lorem ipsum dolor sit amet consectetur adispicing elit"),
+			array("priority" => "medium", "type" => "colony", "description" => "Lorem ipsum dolor sit amet consectetur adispicing elit")
+		);
+
+		echo json_encode($report);
+	}
 }
 
 ?>
