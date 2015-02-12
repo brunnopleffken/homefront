@@ -4,11 +4,11 @@
 		<section id="login">
 			<form action="login/user_authentication" method="post" id="loginForm" class="validate">
 				<label for="inputLoginUsername">E-mail Address</label>
-				<input type="text" name="username" id="inputLoginUsername" class="flexible required">
+				<input type="text" name="username" id="inputLoginUsername" class="flexible required email">
 				<label for="inputLoginPassword">Password</label>
 				<input type="password" name="password" id="inputLoginPassword" class="flexible required">
 				<label for="inputLoginServer">Server</label>
-				<select name="server" id="inputLoginServer" class="large">
+				<select name="server" id="inputLoginServer" class="select2 large">
 					<option value="1">Local Server 1</option>
 					<option value="2">Local Server 2</option>
 					<option value="3">Local Server 3</option>

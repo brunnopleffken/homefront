@@ -7,10 +7,13 @@
 	<!-- Cascading Stylesheet -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="thirdparty/select2/select2.css">
 	<!-- JavaScript Third-party -->
 	<script src="thirdparty/jquery/jquery.min.js"></script>
+	<script src="thirdparty/select2/select2.min.js"></script>
 	<!-- JavaScript Core -->
 	<script src="libraries/core/Application.js"></script>
+	<script src="libraries/core/Forms.js"></script>
 	<script src="libraries/core/Notification.js"></script>
 	<script src="libraries/core/UI.js"></script>
 	<script src="libraries/core/Utils.js"></script>
