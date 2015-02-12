@@ -50,5 +50,6 @@ $(document).ready(function() {
 
 	// Centralize window
 	UI.loadWindow();
+	UI.enableTabBar();
 
 });
