@@ -32,8 +32,7 @@ $(document).ready(function() {
 			})
 			.done(function(data) {
 				if(data.status == "ok") {
-					console.log("Form OK");
-					// window.location.href = "report/";
+					window.location.href = "report/";
 				}
 				else if(data.status == "wrong_password") {
 					Notification.warning(
