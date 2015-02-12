@@ -76,7 +76,7 @@
 	position: fixed;
 	width: 60px;
 	z-index: 150;
-	@include transition(250ms ease);
+	@include transition(250ms cubic-bezier(0.230, 1.000, 0.320, 1.000));
 	ul {
 		list-style: none;
 		margin-top: -200px;

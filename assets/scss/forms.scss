@@ -18,8 +18,10 @@ form {
 		&.large { width: 250px; }
 		&.wide { width: 400px; }
 		&.flexible { width: 100%; }
-		&.error {
-			border: 1px solid #900;
+		&.error { border: 1px solid #900; }
+		&:-webkit-autofill {
+			background-color: rgba(0, 0, 0, 0.6) !important;
+			color: #ddd !important;
 		}
 	}
 	input[type=submit],
@@ -53,12 +55,8 @@ form {
 			padding: 20px;
 			width: 145px;
 			@include transition(300ms);
-			&:hover {
-				background-color: rgba(255, 255, 255, 0.1);
-			}
-			&:last-child {
-				margin: 0;
-			}
+			&:hover { background-color: rgba(255, 255, 255, 0.1); }
+			&:last-child { margin: 0; }
 		}
 	}
 }
