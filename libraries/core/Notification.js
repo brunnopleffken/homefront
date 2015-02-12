@@ -6,24 +6,17 @@
  * ../resources/Notification.js
  */
 
-var Notification;
+var Notification = {};
 
 (function() {
 	"use strict";
 
 	/**
 	 * --------------------------------------------------------------------
-	 * NOTIFICATION.JS CONSTRUCTOR
-	 * --------------------------------------------------------------------
-	 */
-	Notification = function() {};
-
-	/**
-	 * --------------------------------------------------------------------
 	 * WARNING - SHOW SIMPLE WARNING MESSAGE WITH "OK" BUTTON TO CLOSE
 	 * --------------------------------------------------------------------
 	 */
-	Notification.prototype.warning = function(title, message) {
+	Notification.warning = function(title, message) {
 		var $modal = $("#half-modal"),
 			parent = this;
 
@@ -52,7 +45,7 @@ var Notification;
 	 * ERROR - SHOW FATAL ERROR MESSAGE WITHOUT ANY ACTION POSSIBLE
 	 * --------------------------------------------------------------------
 	 */
-	Notification.prototype.fatalError = function(title, message) {
+	Notification.fatalError = function(title, message) {
 		var $modal = $("#full-modal");
 
 		// Build warning message and window structure
@@ -70,7 +63,7 @@ var Notification;
 	 * --------------------------------------------------------------------
 	 * confirmAction() = callback function to execute if user clicks on OK
 	 */
-	Notification.prototype.confirm = function(title, message, confirmAction) {
+	Notification.confirm = function(title, message, confirmAction) {
 		var $modal = $("#half-modal"),
 			parent = this;
 
@@ -98,7 +91,7 @@ var Notification;
 	 * --------------------------------------------------------------------
 	 * Used on: warning()
 	 */
-	Notification.prototype._closeWarningWindow = function(modalWindowObject) {
+	Notification._closeWarningWindow = function(modalWindowObject) {
 		modalWindowObject.fadeOut(300,
 			function() {
 				// Show confirm/refuse buttons for further usage
@@ -113,7 +106,7 @@ var Notification;
 	 * --------------------------------------------------------------------
 	 * Type: success | warning | error
 	 */
-	Notification.prototype.toast = function(title, message, type) {
+	Notification.toast = function(title, message, type) {
 		var $htmlElement = $('.toast');
 
 		// Populate toast notification with data

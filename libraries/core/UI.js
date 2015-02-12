@@ -6,17 +6,10 @@
  * ../resources/UI.js
  */
 
-var UI;
+var UI = {};
 
 (function() {
 	"use strict";
-
-	/**
-	 * --------------------------------------------------------------------
-	 * UI.JS CONSTRUCTOR
-	 * --------------------------------------------------------------------
-	 */
-	UI = function() {};
 
 	/**
 	 * --------------------------------------------------------------------
@@ -24,7 +17,7 @@ var UI;
 	 * --------------------------------------------------------------------
 	 * Used on: loadWindow()
 	 */
-	UI.prototype._centralizeModalWindow = function(identifier) {
+	UI._centralizeModalWindow = function(identifier) {
 		var elementOffsetHeight = identifier.offsetHeight,
 			elementOffsetWidth  = identifier.offsetWidth;
 
@@ -37,7 +30,7 @@ var UI;
 	 * FADE IN AND CENTRALIZE MAIN MODAL WINDOW
 	 * --------------------------------------------------------------------
 	 */
-	UI.prototype.loadWindow = function() {
+	UI.loadWindow = function() {
 		var modalWindow = document.getElementById("modal-window");
 
 		// Hide loader
@@ -50,7 +43,7 @@ var UI;
 		try {
 			$('#modal-window .content').perfectScrollbar();
 		} catch(e) {
-			console.error(e.message);
+			console.log(e.message);
 		}
 
 		// Centralize modal window
@@ -59,10 +52,30 @@ var UI;
 
 	/**
 	 * --------------------------------------------------------------------
+	 * INITIATE LOADER AND HIDE FRAME WINDOW
+	 * --------------------------------------------------------------------
+	 */
+	UI.startLoader = function() {
+		$(".modal-window").hide();
+		$(".loader").show();
+	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * CLOSE LOADER AND SHOW FRAME WINDOW
+	 * --------------------------------------------------------------------
+	 */
+	UI.endLoader = function() {
+		$(".modal-window").fadeIn();
+		$(".loader").hide();
+	}
+
+	/**
+	 * --------------------------------------------------------------------
 	 * TAB NAVIGATION BAR
 	 * --------------------------------------------------------------------
 	 */
-	UI.prototype.enableTabBar = function() {
+	UI.enableTabBar = function() {
 		$("body").on("click", "#tab-bar ul li", function() {
 			var sectionId = $(this).data("section");
 

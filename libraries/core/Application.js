@@ -37,4 +37,7 @@ $(document).ready(function() {
 			event.preventDefault();
 		}
 	});
+
+	// Centralize window
+	UI.loadWindow();
 });
