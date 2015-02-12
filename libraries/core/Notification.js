@@ -3,7 +3,7 @@
  * (c) 2015 - Homefront Online. All rights reserved.
  * Developed by Brunno Pleffken Hosti
  *
- * ../resources/Notification.js
+ * ../libraries/core/Notification.js
  */
 
 var Notification = {};

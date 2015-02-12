@@ -3,7 +3,7 @@
  * (c) 2015 - Homefront Online. All rights reserved.
  * Developed by Brunno Pleffken Hosti
  *
- * ../resources/Application.js
+ * ../libraries/core/Application.js
  */
 
 /*
@@ -17,6 +17,11 @@ var SETTINGS = {
 	debug: true  // Enable console.log method (disable in production environment)
 };
 
+/*
+* --------------------------------------------------------------------
+* GLOBAL FUNCTIONS THAT MUST BE APPLIED TO ALL PAGES
+* --------------------------------------------------------------------
+*/
 $(document).ready(function() {
 	"use strict";
 

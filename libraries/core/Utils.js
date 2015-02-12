@@ -3,7 +3,7 @@
  * (c) 2015 - Homefront Online. All rights reserved.
  * Developed by Brunno Pleffken Hosti
  *
- * ../resources/Utils.js
+ * ../libraries/core/Utils.js
  */
 
 var Utils;
