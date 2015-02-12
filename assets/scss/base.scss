@@ -70,12 +70,12 @@ a {
 		border-radius: 0 15px 0 0;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 		height: 100%;
-		line-height: 1.4em;
 		overflow: hidden;
 		position: relative;
 		width: 100%;
 		section {
 			display: none;
+			line-height: 1.3em;
 			padding: 14px;
 			&:first-child {
 				display: block;  // Automatically show first SECTION
