@@ -105,7 +105,7 @@ class Database
 
 		// Insert into table
 		$sql = "INSERT INTO {$table} (" . implode(", ", $fields) . ") VALUES (" . implode(", ", $values) . ");";
-		$this->query = mysql_query($this->link, $sql);
+		$this->query = mysqli_query($this->link, $sql);
 		$this->log[] = $sql;
 
 		// In case of error...
