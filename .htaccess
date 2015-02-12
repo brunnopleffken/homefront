@@ -7,6 +7,6 @@ RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?c=$1
 RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?c=$1
 RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?c=$1&id=$2
 RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/$ index.php?c=$1&id=$2
-RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z]+)$ index.php?c=$1&act=$2
-RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z]+)/$ index.php?c=$1&act=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z_]+)$ index.php?c=$1&act=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z_]+)/$ index.php?c=$1&act=$2
 </IfModule>
