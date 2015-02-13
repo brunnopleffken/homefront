@@ -145,7 +145,7 @@ class Main
 
 			// Load page content
 			ob_start();
-			require("views/" . $this->controller . "." . $this->action . ".php");
+			require("views/" . $this->controller . "." . ucwords($this->action) . ".php");
 			$this->content = ob_get_clean();
 
 			// Load master page
