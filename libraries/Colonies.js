@@ -9,7 +9,7 @@
 $(document).ready(function() {
 	"use strict";
 
-	//planetRender("planet-preview", "earth.png");
+	planetRender("planet-preview", "hoth.png");
 });
 
 /*
@@ -17,7 +17,7 @@ $(document).ready(function() {
  * RENDER 3D PLANET USING WEBGL
  * --------------------------------------------------------------------
  */
-$(document).ready(function() {
+function planetRender(_containerId, _textureName) {
 
 	// THIS IS THE PLANET! :)
 	var sphere;
@@ -29,11 +29,11 @@ $(document).ready(function() {
 	// Initialize WebGL renderer
 	var renderer = new THREE.WebGLRenderer({ alpha: true });
 	renderer.setSize(250, 250);
-	document.getElementById("planet-preview").appendChild(renderer.domElement);
+	document.getElementById(_containerId).appendChild(renderer.domElement);
 
 	// Load texture and create sphere (a.k.a. planet)
 	var loader = new THREE.TextureLoader();
-	loader.load("assets/textures/earth.png", function(texture) {
+	loader.load("assets/textures/" + _textureName, function(texture) {
 		var geometry = new THREE.SphereGeometry(1, 30, 30);
 		var material = new THREE.MeshPhongMaterial({ map: texture });
 
@@ -64,4 +64,4 @@ $(document).ready(function() {
 	// Run!
 	render();
 
-});
+}
