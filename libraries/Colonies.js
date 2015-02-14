@@ -9,7 +9,14 @@
 $(document).ready(function() {
 	"use strict";
 
-	planetRender("planet-preview", "hoth.png");
+	/*
+	 * --------------------------------------------------------------------
+	 * RUN WEBGL RENDERING ONLY WHEN VIEWING PLANET DETAILS
+	 * --------------------------------------------------------------------
+	 */
+	if(SETTINGS.action == "planet") {
+		planetRender("planet-preview", "earth.png");
+	}
 });
 
 /*
@@ -43,7 +50,7 @@ function planetRender(_containerId, _textureName) {
 	});
 
 	// Add subtle ambient lighting
-	var ambientLight = new THREE.AmbientLight(0x000000);
+	var ambientLight = new THREE.AmbientLight(0x111111);
 	scene.add(ambientLight);
 
 	// Directional lighting

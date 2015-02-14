@@ -50,6 +50,9 @@
 			<li>
 				<a href="settings/"><i class="fa fa-cogs"></i></a>
 			</li>
+			<li>
+				<a href="help/"><i class="fa fa-question-circle"></i></a>
+			</li>
 		</ul>
 	</div>
 
@@ -64,6 +67,7 @@
 			<li id="nav-military"><a href="military/"><i class="fa fa-fw fa-crosshairs"></i><span>Military</span></a></li>
 			<li id="nav-galaxymap"><a href="galaxymap/"><i class="fa fa-fw fa-compass"></i><span>Galaxy Map</span></a></li>
 		</ul>
+		<a href=""><i class="fa fa-fw fa-info-circle"></i></a>
 	</div>
 
 
