@@ -123,4 +123,10 @@
 		width: 200px;
 		a > span { opacity: 1; }
 	}
+	> a {
+		bottom: 10px;
+		font-size: 16px;
+		left: 10px;
+		position: absolute;
+	}
 }

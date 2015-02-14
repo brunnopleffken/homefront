@@ -1,6 +1,9 @@
 table.data-table {
 	border-collapse: separate;
 	border-spacing: 3px;
+	&.flexible {
+		width: 100%;
+	}
 	tr {
 		th {
 			background-color: rgba(0, 0, 0, 0.5);
