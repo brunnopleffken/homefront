@@ -55,6 +55,9 @@ var UI;
 
 		// Centralize modal window
 		this._centralizeModalWindow(modalWindow);
+
+		// Mark corresponding navigation bar item
+		this._selectNavigationBarItem(SETTINGS.controller);
 	}
 
 	/**
@@ -96,6 +99,16 @@ var UI;
 				$("#modal-window .content").perfectScrollbar();
 			});
 		});
+	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * SELECT CORRESPONDING ITEM ON NAVIGATION BAR
+	 * --------------------------------------------------------------------
+	 */
+	UI._selectNavigationBarItem = function(controller) {
+		var controller = controller.toLowerCase();
+		$(".navigation-bar #nav-" + controller).addClass("selected");
 	}
 
 }).call(this);
