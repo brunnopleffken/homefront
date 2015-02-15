@@ -18,9 +18,11 @@ a { color: #fff; text-decoration: none; }
 
 .main-container { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsRAAALEQF/ZF+RAAAAHnRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1LjGrH0jrAAAAFHRFWHRDcmVhdGlvbiBUaW1lADgvMi8xMmcRu9gAAACvSURBVGhD7dlJDoAwDENRTsP9b1jEKECCBUNJ0ENiwy6kzrfTphmfdvem/JaqiFLK0U/edCNlJ6bTtBSSuYj+VA2FZC9iroHYqw8KYk/EGGIPN+2qC/bOuCd2Yq/vqH9hTxavtRZ8aN9F7MRO7NcjBbIH27zI7PORjMIdZP+kE8iO7MiO7Lbx0cKYBZ0FnQXd+YUUG8/Gv3VvKbPL7Ftn/FRAQ3ZkR3Zkr5+7L+uuAzMfRtLHlTaWAAAAAElFTkSuQmCC); display: block; height: 100%; position: relative; }
 .main-container.in-game { margin-top: 30px; }
+.main-container.in-game .modal-window { padding-left: 60px; }
+.main-container.in-game .modal-window h1 { left: 57px; }
 
-.modal-window { left: 50%; margin: auto; padding-left: 60px; position: absolute; top: 50%; }
-.modal-window h1 { left: 57px; position: absolute; top: -45px; }
+.modal-window { left: 50%; margin: auto; position: absolute; top: 50%; }
+.modal-window h1 { left: -3px; position: absolute; top: -45px; }
 .modal-window div#tab-bar { position: absolute; right: 0; top: -25px; }
 .modal-window div#tab-bar ul li { color: #b2e0f6; cursor: pointer; float: left; font-size: 17px; font-weight: 200; margin-left: 20px; opacity: 0.4; -webkit-transition: 300ms; -moz-transition: 300ms; transition: 300ms; }
 .modal-window div#tab-bar ul li.selected { opacity: 1; }

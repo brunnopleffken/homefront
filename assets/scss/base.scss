@@ -33,7 +33,15 @@ a {
 	display: block;
 	height: 100%;
 	position: relative;
-	&.in-game { margin-top: 30px; }
+	&.in-game {
+		margin-top: 30px;
+		.modal-window {
+			padding-left: 60px;
+			h1 {
+				left: 57px;
+			}
+		}
+	}
 }
 
 // MAIN WINDOW (FOR CONTENT)
@@ -41,11 +49,10 @@ a {
 .modal-window {
 	left: 50%;
 	margin: auto;
-	padding-left: 60px;
 	position: absolute;
 	top: 50%;
 	h1 {
-		left: 57px;
+		left: -3px;
 		position: absolute;
 		top: -45px;
 	}
