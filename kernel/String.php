@@ -39,6 +39,39 @@ class String
 
 		return $text;
 	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * ONE-WAY PASSWORD ENCRYPTION
+	 * --------------------------------------------------------------------
+	 */
+	public static function Encrypt($password)
+	{
+		return hash("sha512", base64_decode("Ly9ob21lZnJvbnQ=") . $password);
+	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * GENERATE RANDOM 8 CHAR PASSWORD
+	 * --------------------------------------------------------------------
+	 */
+	public static function MakePassword()
+	{
+		$pass = "";
+		$chars = array(
+			"1","2","3","4","5","6","7","8","9","0",
+			"a","A","b","B","c","C","d","D","e","E","f","F","g","G","h","H","i","I","j","J",
+			"k","K","l","L","m","M","n","N","o","O","p","P","q","Q","r","R","s","S","t","T",
+			"u","U","v","V","w","W","x","X","y","Y","z","Z");
+
+		$count = count($chars) - 1;
+
+		for($i = 0; $i < 8; $i++) {
+			$pass .= $chars[rand(0, $count)];
+		}
+
+		return $pass;
+	}
 }
 
 ?>
