@@ -1,12 +1,23 @@
 table.data-table {
 	border-collapse: separate;
 	border-spacing: 3px;
-	&.flexible {
-		width: 100%;
-	}
+	&.flexible { width: 100%; }
+	&.no-top td { vertical-align: middle; }
 	tr {
+		td {
+			background-color: rgba(210, 230, 250, 0.05);
+			color: $lightBlue;
+			padding: 4px 10px;
+			vertical-align: top;
+			&.min {
+				width: 1%;
+				white-space: nowrap;
+			}
+		}
+	}
+	tr:not(.subtitle) {
 		th {
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(210, 230, 250, 0.05);
 			border-top-right-radius: 15px;
 			color: #7497c1;
 			font-size: 18px;
@@ -14,8 +25,19 @@ table.data-table {
 			text-align: left;
 		}
 		td {
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: rgba(210, 230, 250, 0.1);
+			color: #fff;
 			padding: 12px 10px;
+			@include transition(300ms);
+			&.min {
+				text-align: center;
+				width: 1%;
+				white-space: nowrap;
+			}
+			&.top { vertical-align: top; }
+		}
+		&:hover {
+			td { background-color: rgba(210, 230, 250, 0.13); }
 		}
 	}
 }

@@ -1,0 +1,10 @@
+.grid {
+	display: table;
+	width: 828px;
+	> div.cell {
+		display: table-cell;
+		padding-right: 10px;
+		vertical-align: top;
+		&:last-child { padding: 0; }
+	}
+}

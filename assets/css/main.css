@@ -6,6 +6,10 @@
 table { border-collapse: collapse; border-spacing: 0; }
 table td { padding: 0; }
 
+.grid { display: table; width: 828px; }
+.grid > div.cell { display: table-cell; padding-right: 10px; vertical-align: top; }
+.grid > div.cell:last-child { padding: 0; }
+
 html { height: 100%; }
 
 html, body { background: #000 url("../images/background.jpg") no-repeat center; background-size: cover; color: #fff; cursor: default; font-family: Baksheesh, sans-serif; font-size: 13px; height: 100%; overflow: hidden; position: relative; text-transform: uppercase; }
@@ -13,6 +17,11 @@ html .fleft, body .fleft { float: left; }
 html .fright, body .fright { float: right; }
 html .fcontainer, body .fcontainer { overflow: hidden; }
 html .tcenter, body .tcenter { text-align: center; }
+html .color-credits, body .color-credits { color: #fcc02c !important; }
+html .color-metal, body .color-metal { color: #b9ecff !important; }
+html .color-deuterium, body .color-deuterium { color: #ee2200 !important; }
+html .color-food, body .color-food { color: #37d834 !important; }
+html .color-tech, body .color-tech { color: #e5f8fc !important; }
 
 a { color: #fff; text-decoration: none; }
 
@@ -21,7 +30,7 @@ a { color: #fff; text-decoration: none; }
 .main-container.in-game .modal-window { padding-left: 60px; }
 .main-container.in-game .modal-window h1 { left: 57px; }
 
-.modal-window { left: 50%; margin: auto; position: absolute; top: 50%; }
+.modal-window { height: 520px !important; left: 50%; margin: auto; position: absolute; top: 50%; width: 920px !important; }
 .modal-window h1 { left: -3px; position: absolute; top: -45px; }
 .modal-window div#tab-bar { position: absolute; right: 0; top: -25px; }
 .modal-window div#tab-bar ul li { color: #b2e0f6; cursor: pointer; float: left; font-size: 17px; font-weight: 200; margin-left: 20px; opacity: 0.4; -webkit-transition: 300ms; -moz-transition: 300ms; transition: 300ms; }
@@ -90,8 +99,14 @@ form label { display: block; }
 
 table.data-table { border-collapse: separate; border-spacing: 3px; }
 table.data-table.flexible { width: 100%; }
-table.data-table tr th { background-color: rgba(0, 0, 0, 0.5); border-top-right-radius: 15px; color: #7497c1; font-size: 18px; padding: 10px 15px; text-align: left; }
-table.data-table tr td { background-color: rgba(0, 0, 0, 0.3); padding: 12px 10px; }
+table.data-table.no-top td { vertical-align: middle; }
+table.data-table tr td { background-color: rgba(210, 230, 250, 0.05); color: #b2e0f6; padding: 4px 10px; vertical-align: top; }
+table.data-table tr td.min { width: 1%; white-space: nowrap; }
+table.data-table tr:not(.subtitle) th { background-color: rgba(210, 230, 250, 0.05); border-top-right-radius: 15px; color: #7497c1; font-size: 18px; padding: 10px 15px; text-align: left; }
+table.data-table tr:not(.subtitle) td { background-color: rgba(210, 230, 250, 0.1); color: #fff; padding: 12px 10px; -webkit-transition: 300ms; -moz-transition: 300ms; transition: 300ms; }
+table.data-table tr:not(.subtitle) td.min { text-align: center; width: 1%; white-space: nowrap; }
+table.data-table tr:not(.subtitle) td.top { vertical-align: top; }
+table.data-table tr:not(.subtitle):hover td { background-color: rgba(210, 230, 250, 0.13); }
 
 .resources-bar { background-color: rgba(0, 0, 0, 0.8); border-bottom: 1px solid #1d2a37; box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8); position: fixed; width: 100%; z-index: 200; }
 .resources-bar .resources { list-style: none; margin-left: 10px; float: left; }

@@ -19,6 +19,11 @@ html, body {
 	.fright { float: right; }
 	.fcontainer { overflow: hidden; }
 	.tcenter { text-align: center; }
+	.color-credits { color: $credits !important; }
+	.color-metal { color: $metal !important; }
+	.color-deuterium { color: $deuterium !important; }
+	.color-food { color: $food !important; }
+	.color-tech { color: $lightBlueHover !important; }
 }
 
 a {
@@ -47,10 +52,12 @@ a {
 // MAIN WINDOW (FOR CONTENT)
 
 .modal-window {
+	height: 520px !important;
 	left: 50%;
 	margin: auto;
 	position: absolute;
 	top: 50%;
+	width: 920px !important;
 	h1 {
 		left: -3px;
 		position: absolute;
