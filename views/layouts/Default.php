@@ -58,7 +58,7 @@
 
 	<div class="navigation-bar">
 		<ul>
-			<li id="nav-build"><a href="build/"><i class="fa fa-fw fa-wrench"></i><span>Build</span></a></li>
+			<li id="nav-build"><a href="shipyard/"><i class="fa fa-fw fa-wrench"></i><span>Shipyard</span></a></li>
 			<li id="nav-research"><a href="research/"><i class="fa fa-fw fa-flask"></i><span>Research</span></a></li>
 			<li id="nav-resources"><a href="resources/"><i class="fa fa-fw fa-gears"></i><span>Resources</span></a></li>
 			<li id="nav-colonies"><a href="colonies/"><i class="fa fa-fw fa-globe"></i><span>Colonies</span></a></li>
