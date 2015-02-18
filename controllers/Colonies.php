@@ -19,9 +19,14 @@ class Colonies extends Application
 		// ...
 	}
 
+	public function System()
+	{
+		// ...
+	}
+
 	public function Planet()
 	{
-
+		// ...
 	}
 }
 
