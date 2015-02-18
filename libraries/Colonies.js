@@ -41,34 +41,37 @@ function planetRender(_containerId, _textureName) {
 	// Load texture and create sphere (a.k.a. planet)
 	var loader = new THREE.TextureLoader();
 	loader.load("assets/textures/" + _textureName, function(texture) {
-		var geometry = new THREE.SphereGeometry(1, 30, 30);
-		var material = new THREE.MeshPhongMaterial({ map: texture });
+		var geometry = new THREE.SphereGeometry(1, 25, 25);
+		var material = new THREE.MeshPhongMaterial({
+			bumpMap: texture,
+			bumpScale: 0.006,
+			map: texture,
+			shininess: 20
+		});
 
 		sphere = new THREE.Mesh(geometry, material);
 		sphere.overdraw = true;
 		scene.add(sphere);
+
+		// Add subtle ambient lighting
+		var ambientLight = new THREE.AmbientLight(0x111111);
+		scene.add(ambientLight);
+
+		// Directional lighting
+		var directionalLight = new THREE.DirectionalLight(0xffffff);
+		directionalLight.position.set(2, 1, 1).normalize();
+		scene.add(directionalLight);
+
+		// Define camera distance (Z-axis)
+		camera.position.z = 1.7;
+
+		// Render and animate
+		var render = function() {
+			requestAnimationFrame(render);
+			renderer.render(scene, camera);
+			sphere.rotation.y -= 0.001;
+		};
+
+		render();
 	});
-
-	// Add subtle ambient lighting
-	var ambientLight = new THREE.AmbientLight(0x111111);
-	scene.add(ambientLight);
-
-	// Directional lighting
-	var directionalLight = new THREE.DirectionalLight(0xffffff);
-	directionalLight.position.set(2, 1, 1).normalize();
-	scene.add(directionalLight);
-
-	// Define camera distance (Z-axis)
-	camera.position.z = 1.7;
-
-	// Render and animate
-	var render = function() {
-		requestAnimationFrame(render);
-		sphere.rotation.y -= 0.001;
-		renderer.render(scene, camera);
-	};
-
-	// Run!
-	render();
-
 }
