@@ -21,6 +21,11 @@
 	<script src="libraries/core/Utils.js"></script>
 	<!-- JavaScript Library -->
 	<script src="libraries/<?php echo $this->controller ?>.js"></script>
+	<!-- JavaScript inline assets -->
+	<script>
+		SETTINGS.controller = "<?php echo $this->controller ?>";
+		SETTINGS.action = "<?php echo $this->action ?>";
+	</script>
 </head>
 <body>
 
