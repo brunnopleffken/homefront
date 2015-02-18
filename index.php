@@ -70,9 +70,6 @@ class Main
 
 		$this->LoadController($this->controller, $this->action);
 		$this->LoadView($this->controller, $this->action);
-
-		// Debug
-		//String::PR($this);
 	}
 
 	/**
