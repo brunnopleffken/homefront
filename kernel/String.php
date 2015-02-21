@@ -72,6 +72,39 @@ class String
 
 		return $pass;
 	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * GET TEXT FILE AND CONVERT TO ARRAY
+	 * --------------------------------------------------------------------
+	 */
+	public static function FileToArray($filename)
+	{
+		$handler = fopen("data/" . $filename . ".txt", "r");
+		$content = fread($handler, filesize("data/" . $filename . ".txt"));
+
+		$array = explode("\n", $content);
+
+		return $array;
+	}
+
+	/**
+	 * --------------------------------------------------------------------
+	 * GET RANDOM ITEM OF A TEXT FILE
+	 * --------------------------------------------------------------------
+	 */
+	public static function RandomFileToArray($filename)
+	{
+		$content = fread(
+			fopen("data/" . $filename . ".txt", "r"),
+			filesize("data/" . $filename . ".txt")
+		);
+
+		$array = explode("\n", $content);
+		$length = count($array) - 1;
+
+		return $array[rand(0, $length)];
+	}
 }
 
 ?>
