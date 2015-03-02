@@ -30,7 +30,7 @@ a { color: #fff; text-decoration: none; }
 .main-container.in-game .modal-window { padding-left: 60px; }
 .main-container.in-game .modal-window h1 { left: 57px; }
 
-.modal-window { height: 520px !important; left: 50%; margin: auto; position: absolute; top: 50%; width: 920px !important; }
+.modal-window { height: 520px; left: 50%; margin: auto; position: absolute; top: 50%; width: 920px; }
 .modal-window h1 { left: -3px; position: absolute; top: -45px; }
 .modal-window div#tab-bar { position: absolute; right: 0; top: -25px; }
 .modal-window div#tab-bar ul li { color: #b2e0f6; cursor: pointer; float: left; font-size: 17px; font-weight: 200; margin-left: 20px; opacity: 0.4; -webkit-transition: 300ms; -moz-transition: 300ms; transition: 300ms; }
@@ -138,6 +138,10 @@ table.data-table tr:not(.subtitle):hover td { background-color: rgba(210, 230, 2
 .navigation-bar:hover { transform: translate3d(0, 0, 0); width: 200px; }
 .navigation-bar:hover a > span { opacity: 1; }
 .navigation-bar > a { bottom: 10px; font-size: 16px; left: 10px; position: absolute; }
+
+.toast { background-color: rgba(0, 0, 0, 0.5); border: 2px solid rgba(200, 235, 255, 0.2); display: none; right: 20px; padding: 20px; position: absolute; top: 20px; width: 400px; }
+.toast .title { color: #e5f8fc; display: block; font-size: 20px; margin-bottom: 3px; }
+.toast .message { opacity: 1; }
 
 .full-bg-overlay { background-color: rgba(0, 0, 0, 0.8); display: none; height: 100%; position: absolute; top: 0; width: 100%; z-index: 900; }
 .full-bg-overlay .full-modal-window { background: rgba(80, 100, 130, 0.4) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAAsRAAALEQF/ZF+RAAAAHnRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1LjGrH0jrAAAAFHRFWHRDcmVhdGlvbiBUaW1lADgvMi8xMmcRu9gAAACvSURBVGhD7dlJDoAwDENRTsP9b1jEKECCBUNJ0ENiwy6kzrfTphmfdvem/JaqiFLK0U/edCNlJ6bTtBSSuYj+VA2FZC9iroHYqw8KYk/EGGIPN+2qC/bOuCd2Yq/vqH9hTxavtRZ8aN9F7MRO7NcjBbIH27zI7PORjMIdZP+kE8iO7MiO7Lbx0cKYBZ0FnQXd+YUUG8/Gv3VvKbPL7Ftn/FRAQ3ZkR3Zkr5+7L+uuAzMfRtLHlTaWAAAAAElFTkSuQmCC); border: 1px solid rgba(210, 235, 250, 0.7); box-shadow: 0 0 15px rgba(255, 255, 255, 0.2) inset; height: 200px; left: 50%; margin: auto; margin-left: -250px; margin-top: -100px; padding: 10px; position: absolute; top: 50%; width: 500px; }

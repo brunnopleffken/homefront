@@ -121,9 +121,7 @@ var Notification;
 		document.querySelector('.toast .message').innerHTML = message;
 
 		// Show toast notification for 3s and then fades out
-		$htmlElement.addClass('visible ' + type).delay(4000).fadeOut(1000, function() {
-			$(this).removeClass('visible ' + type);
-		});
+		$htmlElement.fadeIn().delay(4000).fadeOut();
 	}
 
 }).call(this);

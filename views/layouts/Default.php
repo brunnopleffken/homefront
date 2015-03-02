@@ -73,6 +73,12 @@
 
 	<div id="main-container" class="main-container in-game">
 		<?php echo $this->content ?>
+
+		<!-- TOAST NOTIFICATION -->
+		<div class="toast">
+			<span class="title">Notification title</span>
+			<span class="message">This is a toast message to warn user something.</span>
+		</div>
 	</div>
 
 	<!-- LOADER -->
@@ -80,13 +86,6 @@
 	<div class="loader">
 		<div class="double-bounce1"></div>
 		<div class="double-bounce2"></div>
-	</div>
-
-	<!-- TOAST NOTIFICATION -->
-
-	<div class="toast" style="display:none">
-		<span class="title"></span>
-		<span class="message"></span>
 	</div>
 
 	<!-- FULL SCREEN MODAL WINDOW / FATAL ERROR -->
